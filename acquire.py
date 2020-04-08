@@ -36,9 +36,8 @@ def generate_csv():
     if data_already_acquired():
         print('csv has been previously generated.')
     else:
-        merged_data = merge_data(get_sql_data(), get_fips())
-        print('Data Aqcuired')
-        return merged_data
+        df = merge_data(get_sql_data(), get_fips())
+        df.to_csv('zillow.csv')
     
 def acquire_data():
     generate_csv()
