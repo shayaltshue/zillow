@@ -5,6 +5,10 @@
 - test the model
 - make the presentation
 
+# Thought processes for SQL
+- Identify what a single unit property is. Going with the assumption that everything in the sql database that isn't listed as having mutliple units, is therefor a single unit property. Also making an assuming that it's only houses.
+
+
 # Plan
     * Find the states and counties each property tax is in
         - This will require outside data to be pulled in
