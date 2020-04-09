@@ -12,6 +12,7 @@ def get_sql_data():
 		bathroomcnt,
         calculatedfinishedsquarefeet,
 		taxvaluedollarcnt,
+        taxamount,
 		fips
     FROM properties_2017 as p
     JOIN predictions_2017 as pr USING(`parcelid`)
@@ -38,6 +39,7 @@ def generate_csv():
     else:
         df = merge_data(get_sql_data(), get_fips())
         df.to_csv('zillow.csv')
+        print('csv was generated')
     
 def acquire_data():
     generate_csv()

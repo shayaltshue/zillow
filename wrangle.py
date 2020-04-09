@@ -11,7 +11,7 @@ def drop_columns(df):
 
 def rename_columns(df):
     df.rename(columns={'bedroomcnt':'bedroom_count', 'bathroomcnt':'bathroom_count', 'calculatedfinishedsquarefeet':'total_sqft',
-       'taxvaluedollarcnt':'tax_amount', 'Name':'county', 'State':'state'}, inplace=True)
+       'taxvaluedollarcnt':'property_value', 'taxamount':'tax_amount', 'Name':'county', 'State':'state'}, inplace=True)
     return df
 
 def clean_data(df):
