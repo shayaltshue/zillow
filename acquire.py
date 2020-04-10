@@ -1,4 +1,4 @@
-from env import get_url_for_pancakes
+from env import user, password, host 
 
 import os.path
 import pandas as pd
@@ -19,7 +19,7 @@ def get_sql_data():
     WHERE propertylandusetypeid = 261 and (transactiondate >= '2017-05-01' AND transactiondate <= '2017-06-31')
     """
 
-    zillow_url = get_url_for_pancakes('zillow')
+    zillow_url = f'mysql+pymysql://{user}:{password}@{host}/zillow'
     zillow_df = pd.read_sql(query, zillow_url)
     return zillow_df
 
