@@ -1,4 +1,4 @@
-from env import get_url_for_pancakes
+import env
 
 import os.path
 import pandas as pd
