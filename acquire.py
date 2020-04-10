@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 from env import user, password, host 
+=======
+import env
+>>>>>>> c512f7dc1d820c8a159ee6760a01c339bad225ed
 
 import os.path
 import pandas as pd

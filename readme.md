@@ -30,7 +30,8 @@
         - Stuff and things to be filled out later
         - Model which answers the stakeholder's question about the data
 
-# Pipeline:
+# Instructions for Reproducability
+
  
 ## ACQUIRE:
 Goal: leave this section with a dataframe ready to prepare.
