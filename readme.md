@@ -8,8 +8,16 @@
 ### Source link for the FIPS
 > https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/home/?cid=nrcs143_013697
 
-# Thought processes for SQL
-- Identify what a single unit property is. Going with the assumption that everything in the sql database that isn't listed as having mutliple units, is therefor a single unit property. Also making an assuming that it's only houses.
+# Data Dictionary
+| Pandas Dataframe | SQL Database                 | Field Description                | Field Purpose                                                                        |
+|------------------|------------------------------|----------------------------------|--------------------------------------------------------------------------------------|
+| bedroom_count    | bedroomcnt                   | # of bedrooms in the home        | Feature to be used to predict property value                                         |
+| bathroom_count   | bathroomcnt                  | # of bathrooms in the home       | Feature to be used to predict property value                                         |
+| total_sqft       | calculatedfinishedsquarefeet | Total amount of square feet      | Used calculated sqft due to it being the overall sqft as opposed to a rough estimate |
+| property_value   | taxvaluedollarcnt            | Value of the home                | Goal of the project is to attempt to predict the property value using other fiels    |
+| tax_amount       | taxamount                    | Tax value of the home            | Used to help identify tax trends by county                                           |
+| county           | n/a                          | Which county the home resides in | Data pulled from external source; used to get statistics by county                   |
+| state            | n/a                          | Which state the home resides in  | Data pulled from external source; useful to see which state the houses are in        |
 
 
 # Plan
@@ -31,19 +39,10 @@
         - Model which answers the stakeholder's question about the data
 
 # Instructions for Reproducability
-
- 
-## ACQUIRE:
-Goal: leave this section with a dataframe ready to prepare.
-
-The ad hoc part includes summarizing your data as you read it in and begin to explore, look at the first few rows, data types, summary stats, column names, shape of the data frame, etc.
-
-acquire.py: The reproducible part is the gathering data from SQL.
-
-## PREP:
-Goal: leave this section with a dataset that is ready to be analyzed. Data types are appropriate, missing values have been addressed, as have any data integrity issues.
-
-The ad hoc part includes plotting the distributions of individual variables and using those plots to identify outliers and if those should be handled (and if so, how), identify unit scales to identify how to best scale the numeric data, as well as finding erroneous or invalid data that may exist in your dataframe.
+- Env.py is required. Inside env.py there are three required variables:
+    * sql password
+    * sql username (variable is called 'user')
+    * sql host
 
 Add a data dictionary in your notebook that defines all fields used in either your model or your analysis, and answers the question: why did you use the fields you used, e.g. why did you use bedroom_field1 over bedroom_field2, not why did you use number of bedrooms!
 
