@@ -20,23 +20,12 @@
 | state            | n/a                          | Which state the home resides in  | Data pulled from external source; useful to see which state the houses are in        |
 
 
-# Plan
-    * Find the states and counties each property tax is in
-        - This will require outside data to be pulled in
-    * Calculate the distribution rates for each county
-        - Need to include distribution of tax rates for each county in deliverable
-        - Also need to include a median for where the bulk of houses sit within those rates
-        (* Note, these have to be seperate from the model)
-
-    * For the first iteration of the model, the only features we'll be using are *square feet of the home*, *number of bedrooms*, *number of bathrooms*. This will return an estimate of the properties assesed value 'taxvaluedollarcnt'
-    
-    
-
 # Deliverables:
     * Link to presentation: https://docs.google.com/presentation/d/1GrdKzLJi8I9rXibDwru5aTWgpe7Zy_yEOBjALV0eXJU/edit?usp=sharing
-    * Github repository includeds:
-        - Stuff and things to be filled out later
-        - Model which answers the stakeholder's question about the data
+    * Github repository includes:
+        - readme
+        - main jupyter notebook containing work to get to answer
+        - model.py which creates a model to fit, predict and evaluate
 
 # Instructions for Reproducability
 - Env.py is required. Inside env.py there are three required variables:
@@ -44,13 +33,5 @@
     * sql username (variable is called 'user')
     * sql host
 
-## MODELING & EVALUATION
-Goal: develop a regression model that performs better than a baseline.
-
-You must evaluate a baseline model, and show how the model you end up with performs better than that.
-
-model.py: will have the functions to fit, predict and evaluate the model
-
-Your notebook will contain various algorithms and/or hyperparameters tried, along with the evaluation code and results, before settling on the final algorithm.
 
 Be sure and evaluate your model using the standard techniques: plotting the residuals, computing the evaluation metric (SSE, RMSE, and/or MSE), comparing to baseline, plotting y by yhat
