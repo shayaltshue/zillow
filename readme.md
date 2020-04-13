@@ -20,7 +20,7 @@
 
 
 # Deliverables:
-    * [Link to presentation](https://docs.google.com/presentation/d/1bZ1TxMUekM65IAtjv4nQApvxPLSJ5pidiqw5CYDbnh0/edit?usp=sharing)
+    * [Link to presentation](<https://docs.google.com/presentation/d/1bZ1TxMUekM65IAtjv4nQApvxPLSJ5pidiqw5CYDbnh0/edit?usp=sharing>)
     * Github repository includes:
         - readme
         - main jupyter notebook containing work to get to answer
