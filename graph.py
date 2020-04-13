@@ -17,8 +17,6 @@ def plot_county_taxes(tax_los_angeles, tax_orange, tax_ventura):
     ax3.set_ylabel('Number of Homes')
     plt.xlim(0, 0.2)
 
-plt.subplots_adjust(bottom=10, top = 12)
-
 def plot_features(train):
     y = train.property_value
 
@@ -68,21 +66,21 @@ def graph_train_models(predictions):
 
     plt.subplot(221)
     plt.scatter(y=predictions.lm_sqft - y, x=y, label='Total Square Feet')
-    plt.scatter(y=predictions.baseline, x=y,  label='Baseline', color='red')
+    plt.scatter(y=predictions.baseline - y, x=y,  label='Baseline', color='red')
     plt.legend()
 
     plt.subplot(222)
     plt.scatter(y=predictions.lm_bedroom - y, x=y, label='# of Bedrooms')
-    plt.scatter(y=predictions.baseline, x=y,  label='Baseline', color='red')
+    plt.scatter(y=predictions.baseline - y, x=y,  label='Baseline', color='red')
     plt.legend()
 
 
     plt.subplot(223)
     plt.scatter(y=predictions.lm_bathroom -y, x=y, label='# of Bathrooms')
-    plt.scatter(y=predictions.baseline, x=y,  label='Baseline', color='red')
+    plt.scatter(y=predictions.baseline - y, x=y,  label='Baseline', color='red')
     plt.legend()
 
     plt.subplot(224)
     plt.scatter(y=predictions.lm_sqft_bed_bath - y, x=y, label='SqFt Bed and Bath')
-    plt.scatter(y=predictions.baseline, x=y,  label='Baseline', color='red')
+    plt.scatter(y=predictions.baseline -y, x=y,  label='Baseline', color='red')
     plt.legend()
