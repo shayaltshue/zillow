@@ -1,9 +1,8 @@
 # Project Goals
-- Acqure the data from sql
-- ensure the data is clean
-- create a model
-- test the model
-- make the presentation
+- Acquire the data from SQL
+- Get the tax information by county
+- Create and evaluate models predicting property value
+- Verify model significance and ensure it isn't overfit
 
 ### Source link for the FIPS
 > https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/home/?cid=nrcs143_013697
@@ -29,9 +28,6 @@
 
 # Instructions for Reproducability
 - Env.py is required. Inside env.py there are three required variables:
-    * sql password
-    * sql username (variable is called 'user')
-    * sql host
-
-
-Be sure and evaluate your model using the standard techniques: plotting the residuals, computing the evaluation metric (SSE, RMSE, and/or MSE), comparing to baseline, plotting y by yhat
+    * SQL password
+    * SQL username (variable is called 'user')
+    * SQL host
